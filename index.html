@@ -11,7 +11,7 @@
   <title>Base Apparel</title>
 <body>
   <main>
-    <div style="grid-column: 1;" class="grid-column-1">
+    <div class="intro" style="grid-column: 1;" class="grid-column-1">
       <img class="logo" src="images/logo.svg" alt="">
       <div class="text">
         <h1 class="pink-text">
@@ -24,10 +24,15 @@
           Add your email below to stay up-to-date with announcements and our launch deals.</p>
           <div class="email">
             <input type="email" name="email" id="email" placeholder="Email Adress">
-            <button>
+            <div id="error" class="error-mark">
+              !
+            </div>
+            <button onclick="document.getElementById('error').style.display = 'flex'
+                             document.getElementById('provide').style.display ='block'">
               <img src="images/icon-arrow.svg" alt="">
             </button>
           </div>
+          <p class="non-valid" id="provide">Please provide a valid email</p>
       </div>
     </div>
   </main> 

@@ -77,20 +77,27 @@ select {
   }
 }
 body{
-    max-width: 1440px;
+  width: fit-content;
     background-image: url(images/bg-pattern-desktop.svg);
-    background-size: contain;
+    background-size:900px;
     display: flex;
 }
 main{
     display: grid;
-    margin-left: 200px;
     margin-top: 50px;
     padding-right: 225px;
-    height: 100vh;
+    height: 100%;
+    width: 100%;
+}
+.intro{
+  margin-left: 200px;
+  z-index: 2;
 }
 .woman{
-    height: fit-content;
+  position: absolute;
+  right: 0;
+  height: min-content;
+  z-index: 1;
 }
 .logo{
     padding-bottom: 150px;
@@ -143,6 +150,7 @@ p{
   color: hsla(0, 36%, 70%, 0.544);
 }
 .email button{
+  cursor: pointer;
   position: relative;
   display: flex;
   align-items: center;
@@ -156,4 +164,23 @@ p{
 }
 .email button:hover{
   background:linear-gradient(135deg, hsl(0, 100%, 94%), hsl(0, 60%, 78%));
+}
+.error-mark{
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  margin-left: 320px;
+  color: white;
+  background-color:hsl(0, 93%, 68%);
+  width: 25px;
+  height: 25px !important;
+  border-radius: 50%;
+}
+.non-valid{
+  color: hsl(0, 93%, 68%);
+  display: none;
+  margin-top: -5px;
+  margin-left: 30px;
+
 }
